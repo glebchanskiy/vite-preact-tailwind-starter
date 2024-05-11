@@ -1,0 +1,50 @@
+{
+    "name": "sp-vite-example",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "prepare": "husky install",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint:js": "eslint --ext .js,.jsx,.ts,.tsx .",
+        "lint:styles": "stylelint '{styles,src}/**/*.scss'",
+        "lint:prettier": "prettier --check '**/*.md'",
+        "lint": "npm run lint:js && npm run lint:styles && npm run lint:prettier",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
+        "@semantic-pie/eslint-config": "^1.0.6",
+        "@semantic-pie/prettier-config": "^1.0.1",
+        "@semantic-pie/stylelint-config": "^1.0.1",
+        "@semantic-pie/ts-config": "^1.0.0",
+        "@types/react": "^18.2.66",
+        "@types/react-dom": "^18.2.22",
+        "@vitejs/plugin-react": "^4.2.1",
+        "esbuild-sass-plugin": "^3.2.0",
+        "eslint": "^8.57.0",
+        "husky": "^9.0.11",
+        "sass": "^1.77.1",
+        "typescript": "^5.2.2",
+        "vite": "^5.2.0",
+        "vite-plugin-svgr": "^4.2.0"
+    },
+    "lint-staged": {
+        "*.{scss}": [
+            "stylelint --fix --quiet"
+        ],
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix --quiet",
+            "prettier --write"
+        ],
+        "*.md": [
+            "prettier --write"
+        ]
+    }
+}
