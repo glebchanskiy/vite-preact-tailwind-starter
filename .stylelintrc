@@ -1,5 +1,6 @@
 {
   "extends": [
     "@semantic-pie/stylelint-config", "@semantic-pie/stylelint-config/prettier"
-  ]
+  ],
+  "ignoreFiles": "./src/index.css"
 }

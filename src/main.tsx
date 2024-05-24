@@ -1,11 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './styles/index.scss';
+import {render} from 'preact';
+import {App} from './app.tsx';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-root.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-);
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+render(<App />, document.getElementById('app')!);
